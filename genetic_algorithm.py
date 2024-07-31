@@ -1,11 +1,9 @@
 import numpy as np
-import math
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from copy import deepcopy
 from matplotlib import animation
 from matplotlib import rc
-
 import pandas as pd
 
 
@@ -347,7 +345,7 @@ plt.xlabel('Generation')
 plt.ylabel('Min or Ave cost')
 plt.title('Cost Evolution')
 plt.legend(['Best Cost', 'Average Parent Cost', 'Average Cost'])
-plt.show()
+plt.savefig("Cost Evolution.png")
 
 fig2 = plt.figure(figsize=(12, 5))
 plt.plot(range(0, G), M_cost)
@@ -357,7 +355,7 @@ plt.xlabel('Generation')
 plt.ylabel('Cost Parameter Value')
 plt.title('Best Cost Parameter Evolution')
 plt.legend(['M*', 'T*', 'L*'])
-plt.show()
+plt.savefig("Best Cost Parameter Evolution.png")
 
 fig3 = plt.figure(figsize=(12, 5))
 plt.plot(range(0, G), M_parent)
@@ -367,7 +365,7 @@ plt.xlabel('Generation')
 plt.ylabel('Cost Parameter Value')
 plt.title('Parent Average Cost Parameter Evolution')
 plt.legend(['M*', 'T*', 'L*'])
-plt.show()
+plt.savefig("Parent Average Cost Parameter Evolution.png")
 
 fig4 = plt.figure(figsize=(12, 5))
 plt.plot(range(0, G), M_pop)
@@ -377,7 +375,7 @@ plt.xlabel('Generation')
 plt.ylabel('Cost Parameter Value')
 plt.title('Population Average Cost Parameter Evolution')
 plt.legend(['M*', 'T*', 'L*'])
-plt.show()
+plt.savefig("Population Average Cost Parameter Evolution.png")
 
 
 
@@ -401,7 +399,7 @@ ax.set_zlabel('Z (m)')
 ax.view_init(elev=70., azim=40)
 ax.legend(['Obstacles', 'Targets', 'Agents']) 
 plt.title('Simulation at first time step')
-
+plt.savefig("Simulation at first time step.png")
 
 
 pos = posTot[plotting[1]]
@@ -419,7 +417,7 @@ ax.set_zlabel('Z (m)')
 ax.view_init(elev=70., azim=40)
 ax.legend(['Obstacles', 'Targets', 'Agents'])  
 plt.title('Simulation at second time step')
-
+plt.savefig("Simulation at second time step.png")
 
 
 pos = posTot[plotting[2]]
@@ -437,7 +435,7 @@ ax.set_zlabel('Z (m)')
 ax.view_init(elev=70., azim=40)
 ax.legend(['Obstacles', 'Targets', 'Agents'])  
 plt.title('Simulation at third time step')
-
+plt.savefig("Simulation at third time step.png")
 
 
 
@@ -456,7 +454,7 @@ ax.set_zlabel('Z (m)')
 ax.view_init(elev=70., azim=40)
 ax.legend(['Obstacles', 'Targets', 'Agents'])  
 plt.title('Simulation at fourth time step')
-
+plt.savefig("Simulation at fourth time step.png")
 
 
 pos = posTot[plotting[4]]
@@ -474,7 +472,7 @@ ax.set_zlabel('Z (m)')
 ax.view_init(elev=70., azim=40)
 ax.legend(['Obstacles', 'Targets', 'Agents'])  
 plt.title('Simulation at fifth time step')
-
+plt.savefig("Simulation at fifth time step.png")
 
 
 
